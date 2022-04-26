@@ -17,8 +17,8 @@ pd.set_option('max_colwidth', None)
 CLIENT_SECRET_FILE = 'jcv_oauth.json'
 
 if __name__ == '__main__':
-    # drive_rs = init_google_drive_rs(CLIENT_SECRET_FILE)
-    # fr = FolderRetriever(drive_rs)
+    drive_rs = init_google_drive_rs(CLIENT_SECRET_FILE)
+    fr = FolderRetriever(drive_rs)
     #
     # folder_id = '1uR5XCZ3zSnbiuTHCB9uez9JHXUdndm-I'  # PrettyPaper/data
     # x = fr.get_all_folder(folder_id)
