@@ -6,6 +6,7 @@ kite_tutorial.ipynb
 *.zip
 .DS_store
 jcv_oauth.json
+*.pickle
 
 
 # Byte-compiled / optimized / DLL files
