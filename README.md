@@ -13,6 +13,9 @@ python -m ipykernel install --user --name googletool --display-name "GoogleTool"
 pip install "jupyterlab>=3" "ipywidgets>=7.6"
 ```
 ```bash
+pip install --upgrade nbformat
+```
+```bash
 pip install jupyter-dash
 ```
 ```bash
