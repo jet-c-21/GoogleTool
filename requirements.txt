@@ -6,3 +6,6 @@ google-auth-oauthlib
 # data processing
 ipykernel
 pandas
+
+# Visualized Tool
+plotly

@@ -8,6 +8,13 @@ conda create --name googletool python=3.8 -y
 ```bash
 python -m ipykernel install --user --name googletool --display-name "GoogleTool"
 ```
+> for Plotly on Jupyter Lab
+```bash
+pip install "jupyterlab>=3" "ipywidgets>=7.6"
+```
+```bash
+pip install jupyter-dash
+```
 
 ## Google Drive
 - [Guiding Doc](https://developers.google.com/drive/api/guides/about-sdk)

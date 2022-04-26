@@ -35,7 +35,7 @@ class FolderRetriever:
         df = pd.DataFrame(file_ls)
         return df
 
-    def find_folder_in_folder(self, searched_folder_id: str, level: int, parent: str):
+    def _find_folder_in_folder(self, searched_folder_id: str, level: int, parent: str) -> Union[pd.DataFrame, None]:
         file_df = self.get_file_df_in_folder(searched_folder_id)
         if file_df is None:
             return
@@ -54,10 +54,10 @@ class FolderRetriever:
 
         return folder_df
 
-    def make_query(self, query_ls: list):
+    def _make_query(self, query_ls: list):
         record = list()
         for folder_id, level, parent in query_ls:
-            folder_df = self.find_folder_in_folder(folder_id, level, parent)
+            folder_df = self._find_folder_in_folder(folder_id, level, parent)
             if folder_df is not None:
                 record.append(folder_df)
 
@@ -77,8 +77,8 @@ class FolderRetriever:
         self.result = pd.concat([self.result, curr_lv_folder_df], ignore_index=True)
 
         # do next level query
-        self.make_query(next_level_query_ls)
+        self._make_query(next_level_query_ls)
 
-    def get_all_folder(self, root_folder_id: str):
-        self.make_query([(root_folder_id, 1, '/')])
+    def get_all_folder(self, root_folder_id: str) -> pd.DataFrame:
+        self._make_query([(root_folder_id, 1, '/')])
         return self.result
