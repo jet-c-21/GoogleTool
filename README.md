@@ -15,6 +15,9 @@ pip install "jupyterlab>=3" "ipywidgets>=7.6"
 ```bash
 pip install jupyter-dash
 ```
+```bash
+jupyter lab build
+```
 
 ## Google Drive
 - [Guiding Doc](https://developers.google.com/drive/api/guides/about-sdk)
